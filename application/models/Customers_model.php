@@ -1,5 +1,4 @@
-<?php
-    define('BASEPATH') or exit('No direct script acces allowed');
+<?php defined('BASEPATH') OR exit('No direct script acces allowed');
 
     class Customers_model extends CI_Model{
         private $_table = "customers";

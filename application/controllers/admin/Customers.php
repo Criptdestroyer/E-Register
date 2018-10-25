@@ -4,12 +4,12 @@
 
         public function __construct(){
             parent::__construct();
-            $this->load->model("Customers_model");
+            $this->load->model("customers_model");
             $this->load->library("form_validation");
         }
 
         public function index(){
-            $data["customers"] = $this->Customers_model->getAll();
+            $data["customers"] = $this->customers_model->getAll();
             $this->load->view("admin/customer/list",$data);
         }
         public function add(){

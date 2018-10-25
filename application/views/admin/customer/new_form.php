@@ -27,7 +27,7 @@
 					<div class="card-header">
 						<a href="<?php echo site_url('admin/customers/') ?>"><i class="fas fa-arrow-left"></i> Back</a>
 					</div>
-                    
+
 					<div class="card-body">
 						<form action="<?php base_url('admin/customer/add') ?>" method="post" enctype="multipart/form-data" >
                         <div class="form-group">
@@ -73,7 +73,7 @@
                             <div class="form-group">
 								<label for="bukti_pembayaran">Bukti Pembayaran</label>
 								<input class="form-control-file <?php echo form_error('bukti_pembayaran') ? 'is-invalid':'' ?>"
-								 type="file" name="image" />
+								 type="file" name="bukti_pembayaran" />
 								<div class="invalid-feedback">
 									<?php echo form_error('bukti_pembayaran') ?>
 								</div>
@@ -117,3 +117,10 @@
 
 </html>
 
+
+
+
+							
+									
+								
+   

@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <?php $this->load->view("admin/_partials/head.php") ?>
+	<?php $this->load->view("admin/_partials/head.php") ?>
 </head>
+
 <body id="page-top">
-    <?php $this->load->view("admin/_partials/navbar.php") ?>
-    <div id="wrapper">
-        <?php $this->load->view("admin/_partials/sidebar.php") ?>
-    </div>
-    <div id="content-wrapper">
+
+	<?php $this->load->view("admin/_partials/navbar.php") ?>
+	<div id="wrapper">
+
+		<?php $this->load->view("admin/_partials/sidebar.php") ?>
+
+		<div id="content-wrapper">
 
 			<div class="container-fluid">
 
@@ -17,7 +21,7 @@
 				<!-- DataTables -->
 				<div class="card mb-3">
 					<div class="card-header">
-						<a href="<?php echo site_url('admin/customers/add') ?>"><i class="fas fa-plus"></i> Add New</a>
+                    <a href="<?php echo site_url('admin/customers/add') ?>"><i class="fas fa-plus"></i> Add New</a>
 					</div>
 					<div class="card-body">
 
@@ -25,7 +29,7 @@
 							<table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
 								<thead>
 									<tr>
-										<th>Name</th>
+                                        <th>Name</th>
 										<th>Email</th>
 										<th>No Hp</th>
                                         <th>Jumlah Tiket</th>
@@ -36,12 +40,12 @@
 									</tr>
 								</thead>
 								<tbody>
-                                <?php foreach ($customers as $product): ?>
+									<?php foreach ($customers as $product): ?>
                                 <tr>
-                                    <td width="150">
+                                    <td >
                                         <?php echo $product->name ?>
                                     </td>
-                                    <td width="150">
+                                    <td >
                                         <?php echo $product->email ?>
                                     </td>
                                     <td>
@@ -59,37 +63,39 @@
                                     <td>
                                         <?php echo $product->status ?>
                                     </td>
-                                    <td width="250">
-											<a href="<?php echo site_url('admin/customers/edit/'.$customer->customer_id) ?>"
+                                    <td >
+											<a href="<?php echo site_url('admin/customers/edit/') ?>"
 											 class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
-											<a onclick="deleteConfirm('<?php echo site_url('admin/customers/delete/'.$customer->customer_id) ?>')"
+											<a onclick="deleteConfirm('<?php echo site_url('admin/customers/delete/') ?>')"
 											 href="#!" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
 										</td>
                                 </tr>
                                 <?php endforeach;?>
-                                </tbody>
+
+								</tbody>
 							</table>
 						</div>
 					</div>
 				</div>
 
 			</div>
+			<!-- /.container-fluid -->
 
-            <!-- footer -->
-            <?php $this->load->view("admin/_partials/footer.php") ?>
+			<!-- Sticky Footer -->
+			<?php $this->load->view("admin/_partials/footer.php") ?>
 
-      </div>
-      <!-- /.content-wrapper -->
+		</div>
+		<!-- /.content-wrapper -->
 
-    </div>
-    <!-- /#wrapper -->
+	</div>
+	<!-- /#wrapper -->
 
-    <!-- Scroll to Top Button-->
-    <?php $this->load->view("admin/_partials/scrolltop.php") ?>
 
-    <!-- Logout Modal-->
-    <?php $this->load->view("admin/_partials/modal.php") ?>
+	<?php $this->load->view("admin/_partials/scrolltop.php") ?>
+	<?php $this->load->view("admin/_partials/modal.php") ?>
 
-    <?php $this->load->view("admin/_partials/js.php") ?>
+	<?php $this->load->view("admin/_partials/js.php") ?>
+
 </body>
+
 </html>

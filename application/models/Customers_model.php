@@ -15,24 +15,24 @@
         public function rules(){
             return [
                 ['field'=>'name',
-                'label'=>'Name',
+                'label'=>'name',
                 'rules'=>'required'],
                 ['field'=>'payment',
-                'label'=>'Payment',
+                'label'=>'payment',
                 'rules'=>'numeric'],
                 ['field'=>'bukti_pembayaran',
-                'label'=>'Bukti Pembayaran'],
+                'label'=>'bukti_pembayaran'],
                 ['field'=>'status',
-                'label'=>'Status',
+                'label'=>'status',
                 'rules'=>'required'],
                 ['field'=>'jumlah_ticket',
-                'label'=>'Jumlah Ticket',
+                'label'=>'jumlah_ticket',
                 'rules'=>'required'],
-                ['field'=>'nohp',
-                'label'=>'No Hp',
+                ['field'=>'no_hp',
+                'label'=>'no_hp',
                 'rules'=>'required'],
                 ['field'=>'email',
-                'label'=>'Email',
+                'label'=>'email',
                 'rules'=>'required']
             ];
         }
@@ -52,7 +52,7 @@
             $this->email = $post["email"];
             $this->no_hp = $post["no_hp"];
             $this->status = $post["status"];
-            $this->bukti_pembayaran = $post["bukti_pembayaran"];
+            // $this->bukti_pembayaran = $post["bukti_pembayaran"];
             $this->db->insert($this->_table,$this); //simpan ke databases
         }
 

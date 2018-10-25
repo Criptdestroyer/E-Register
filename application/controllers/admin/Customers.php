@@ -13,7 +13,7 @@
             $this->load->view("admin/customer/list",$data);
         }
         public function add(){
-            $customer = $this->Customers_model;
+            $customer = $this->customers_model;
             $validation = $this->form_validation;
             $validation->set_rules($customer->rules());
             if($validation->run()){
@@ -25,7 +25,7 @@
         public function edit($id = null){
             if(!isset($id)) redirect('admin/Customers'); //redirect jika tidak ada $id
 
-            $customer = $this->Customers_model;
+            $customer = $this->customers_model;
             $validation = $this->form_validation;
             $validation->set_rules($customer->rules());
 

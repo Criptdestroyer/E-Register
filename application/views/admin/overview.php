@@ -106,7 +106,7 @@
 
           
         <!-- /.container-fluid -->
-
+        <?php $this->load->view("admin/_partials/databases.php") ?>
         <!-- Sticky Footer -->
         <?php $this->load->view("admin/_partials/footer.php") ?>
 

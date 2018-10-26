@@ -60,15 +60,15 @@
                                         <?php echo $product->payment ?>
                                     </td>
                                     <td>
-                                        <?php echo $product->bukti_pembayaran ?>
+										<img src="<?php echo base_url('upload/product/'.$product->bukti_pembayaran) ?>" width="64" />
                                     </td>
                                     <td>
                                         <?php echo $product->status ?>
                                     </td>
-                                    <td width="250">
-											<a href="<?php echo site_url('admin/customers/edit/'.$product->name) ?>"
+                                    <td >
+											<a href="<?php echo site_url('admin/customers/edit/'.$product->customer_id) ?>"
 											 class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
-											<a onclick="deleteConfirm('<?php echo site_url('admin/customers/delete/'.$product->name) ?>')"
+											<a onclick="deleteConfirm('<?php echo site_url('admin/customers/delete/'.$product->customer_id) ?>')"
 											 href="#!" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
 										</td>
                                 </tr>
@@ -97,7 +97,12 @@
 	<?php $this->load->view("admin/_partials/modal.php") ?>
 
 	<?php $this->load->view("admin/_partials/js.php") ?>
-
+	<script>
+	function deleteConfirm(url){
+	$('#btn-delete').attr('href', url);
+	$('#deleteModal').modal();
+	}
+	</script>
 </body>
 
 </html>

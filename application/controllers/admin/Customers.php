@@ -19,7 +19,7 @@
             $validation->set_rules($customer->rules());
             if($validation->run()){
                 $customer->save();
-                $this->session->set_flashdata('succes', 'Berhasil disimpan');
+                $this->session->set_flashdata('success', 'Berhasil disimpan');
             }
             $this->load->view("admin/customer/new_form");
         }
@@ -32,15 +32,15 @@
 
             if($validation->run()){ //melakukan validasi
                 $customer->update(); //menyimpan data
-                $this->session->set_flashdata('succes','Berhasil disimpan');
+                $this->session->set_flashdata('success','Berhasil disimpan');
             }
             $data["customer"] = $customer->getById($id); //mengambil data untuk ditampilkan pada form
-            if(!$data["customer"]) shiw_404();// jika tidak ada data, tampilkan error
+            if(!$data["customer"]) show_404();// jika tidak ada data, tampilkan error
             $this->load->view("admin/customer/edit_form",$data); //menampilkan form edit
         }
         public function delete($id=null){
             if(!isset($id)) show_404();
-            if($this->customer_model->delete($id)){
+            if($this->customers_model->delete($id)){
                 redirect(site_url('admin/customers'));
             }
         }

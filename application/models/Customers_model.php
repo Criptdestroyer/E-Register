@@ -5,7 +5,7 @@
         public $customer_id;
         public $name;
         public $payment;
-        public $bukti_pembayaran;
+        public $bukti_pembayaran = "default.jpg";
         public $status;
         public $jumlah_ticket;
         public $no_hp;
@@ -21,8 +21,6 @@
                 ['field'=>'payment',
                 'label'=>'payment',
                 'rules'=>'numeric'],
-                ['field'=>'bukti_pembayaran',
-                'label'=>'bukti_pembayaran'],
                 ['field'=>'status',
                 'label'=>'status',
                 'rules'=>'required'],
@@ -53,6 +51,7 @@
             $this->email = $post["email"];
             $this->no_hp = $post["no_hp"];
             $this->status = $post["status"];
+            $this->jumlah_ticket = $post["jumlah_ticket"];
             // $this->bukti_pembayaran = $post["bukti_pembayaran"];
             $this->db->insert($this->_table,$this); //simpan ke databases
         }
@@ -65,6 +64,7 @@
             $this->email = $post["email"];
             $this->no_hp = $post["no_hp"];
             $this->status = $post["status"];
+            $this->jumlah_ticket = $post["jumlah_ticket"];
             $this->db->update($this->_table,$this,array('customer_id'=>$post['id']));
         }
         public function delete($id){

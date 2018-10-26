@@ -17,6 +17,7 @@
 			<div class="container-fluid">
 
 				<?php $this->load->view("admin/_partials/breadcrumb.php") ?>
+
                 <?php if ($this->session->flashdata('success')): ?>
 				<div class="alert alert-success" role="alert">
 					<?php echo $this->session->flashdata('success'); ?>
@@ -109,9 +110,9 @@
 <!-- /#wrapper -->
 
 
-<?php $this->load->view("admin/_partials/scrolltop.php") ?>
+	<?php $this->load->view("admin/_partials/scrolltop.php") ?>
 
-<?php $this->load->view("admin/_partials/js.php") ?>
+	<?php $this->load->view("admin/_partials/js.php") ?>
 
 </body>
 

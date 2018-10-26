@@ -60,7 +60,7 @@
                                         <?php echo $product->payment ?>
                                     </td>
                                     <td>
-										<img src="<?php echo base_url('upload/product/'.$product->bukti_pembayaran) ?>" width="64" />
+										<img src="<?php echo base_url('upload/customer/'.$product->bukti_pembayaran) ?>" width="64" />
                                     </td>
                                     <td>
                                         <?php echo $product->status ?>

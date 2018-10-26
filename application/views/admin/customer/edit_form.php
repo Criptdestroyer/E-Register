@@ -80,7 +80,7 @@
                             <div class="form-group">
 								<label for="bukti_pembayaran">Bukti Pembayaran</label>
 								<input class="form-control-file <?php echo form_error('bukti_pembayaran') ? 'is-invalid':'' ?>"
-								 type="file" name="image" value="<?php echo $customer->bukti_pembayaran ?>"/>
+								 type="file" name="bukti_pembayaran" value="<?php echo $customer->bukti_pembayaran ?>"/>
 								<div class="invalid-feedback">
 									<?php echo form_error('bukti_pembayaran') ?>
 								</div>

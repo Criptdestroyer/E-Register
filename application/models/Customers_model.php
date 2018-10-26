@@ -5,7 +5,7 @@
         public $customer_id;
         public $name;
         public $payment;
-        public $bukti_pembayaran = "default.jpg";
+        public $bukti_pembayaran = "default.jpeg";
         public $status;
         public $jumlah_ticket;
         public $no_hp;
@@ -52,6 +52,7 @@
             $this->no_hp = $post["no_hp"];
             $this->status = $post["status"];
             $this->jumlah_ticket = $post["jumlah_ticket"];
+            $this->bukti_pembayaran = $this->_uploadImage();
             // $this->bukti_pembayaran = $post["bukti_pembayaran"];
             $this->db->insert($this->_table,$this); //simpan ke databases
         }
@@ -65,10 +66,38 @@
             $this->no_hp = $post["no_hp"];
             $this->status = $post["status"];
             $this->jumlah_ticket = $post["jumlah_ticket"];
+            if(!empty($_FILES["bukti_pembayaran"]["name"])){
+                $this->bukti_pembayaran = $this->_uploadImage();
+            }else{
+                $this->bukti_pembayaran = $post["bukti_pembayaran"];
+            }
             $this->db->update($this->_table,$this,array('customer_id'=>$post['id']));
         }
         public function delete($id){
+            $this->_deleteImage($id);
             return $this->db->delete($this->_table,array("customer_id"=>$id));
+        }
+        private function _uploadImage(){
+            $config['upload_path'] = './upload/customer/';
+            $config['allowed_types'] = 'jpg|png|jpeg';
+            $config['file_name'] = $this->customer_id;
+            $config['overwrite'] = true;
+            $config['max_size'] = 1024;//1mb
+            // $config['max_width'] = 1024;
+            // $config['max_height'] = 1024;
+
+            $this->load->library('upload',$config);
+            if($this->upload->do_upload('bukti_pembayaran')){
+                return $this->upload->data("file_name");
+            }
+            return "default.jpeg";
+        }
+        private function _deleteImage($id){
+            $customer = $this->getById($id);
+            if($customer->bukti_pembayaran != "default.jpeg"){
+                $filename = explode(".",$customer->bukti_pembayaran)[0];
+                return array_map('unlink',glob(FCPATH."upload/customer/$filename.*"));
+            }
         }
     }
 ?>

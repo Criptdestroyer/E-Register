@@ -1,4 +1,4 @@
-<?php defined('BASEPATH') OR exit('No direct script acces allowed');
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
 
     class Customers_model extends CI_Model{
         private $_table = "customers";
@@ -14,6 +14,7 @@
 
         public function rules(){
             return [
+                
                 ['field'=>'name',
                 'label'=>'name',
                 'rules'=>'required'],
@@ -27,7 +28,7 @@
                 'rules'=>'required'],
                 ['field'=>'jumlah_ticket',
                 'label'=>'jumlah_ticket',
-                'rules'=>'required'],
+                'rules'=>'numeric'],
                 ['field'=>'no_hp',
                 'label'=>'no_hp',
                 'rules'=>'required'],

@@ -4,6 +4,7 @@
 
         public function __construct(){
             parent::__construct();
+            
             $this->load->model("customers_model");
             $this->load->library("form_validation");
         }

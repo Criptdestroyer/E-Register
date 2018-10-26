@@ -22,7 +22,6 @@
            
           }
           public function id_check($id){
- 
             $this->db->select('*');
             $this->db->from('member');
             $this->db->where('member_id',$id);

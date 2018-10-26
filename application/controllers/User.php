@@ -11,23 +11,28 @@
         $this->load->view("Register.php");
     }
     public function register_user(){
+        $confirmPassword = md5($this->input->post('confirmPassword'));
         $user=[
             'member_id'=>uniqid(),
             'username'=>$this->input->post('username'),
             'email'=>$this->input->post('email'),
             'password'=>md5($this->input->post('password')),
+            
             // 'tgl'=>$this->input->post('tgl'),
             // 'bln'=>$this->input->post('bln'),
             // 'thn'=>$this->input->post('thn'),
-            // 'name'=>$this->input->post('name'),
+            'name'=>$this->input->post('firstName')." ".$this->input->post('lastName'),
             'no_hp'=>$this->input->post('no_hp')
         ];
         print_r($user);
         $id_check=$this->user_model->id_check($user['member_id']);
-        if($id_check){
+        if($id_check and ($user['password']==$confirmPassword)){
             $this->user_model->register_user($user);
             $this->session->set_flashdata('success_msg', 'Registered successfully.Now login to your account.');
             redirect('user/login_view');
+        }else if($user['password']!=$confirmPassword){
+            $this->session->set_flashdata('error_msg', 'Password and Confirm Password it\'s different');
+            redirect('user');
         }else{
             $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
             redirect('user');
@@ -51,8 +56,8 @@
  
             $this->load->view('user_profile.php');
         }else{
-            $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
-            $this->load->view("login.php");
+            $this->session->set_flashdata('error_msg', 'Wrong Username or Password');
+            $this->load->view("Login.php");
         }
     }
     function user_profile(){

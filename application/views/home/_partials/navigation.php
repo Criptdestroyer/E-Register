@@ -10,7 +10,7 @@
               <a class="nav-link" href="#">Sign Up</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Log In</a>
+              <a class="nav-link" href="<?php echo site_url('home/login') ?>">Log In</a>
             </li>
           </ul>
         </div>

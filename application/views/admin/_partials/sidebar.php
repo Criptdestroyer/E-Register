@@ -31,7 +31,7 @@
             <span>Charts</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?php echo site_url('admin/login-register/tables.html') ?>">
+          <a class="nav-link" href="<?php echo site_url('admin/customers') ?>">
             <i class="fas fa-fw fa-table"></i>
             <span>Tables</span></a>
         </li>

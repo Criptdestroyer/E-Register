@@ -11,5 +11,6 @@
             $data["customers"] = $this->customers_model->getAll();
             $this->load->view("admin/overview",$data);
         }
+        
     }
 ?>

@@ -6,6 +6,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <a class="nav-link" href="#<?php// echo site_url('User/index') ?>">Cek Pesanan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#<?php// echo site_url('User/index') ?>">Profile</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="<?php echo site_url('User/index') ?>">Sign Up</a>
             </li>

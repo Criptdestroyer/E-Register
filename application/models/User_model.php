@@ -8,10 +8,10 @@
  
             $this->db->select('*');
             $this->db->from('member');
-            $this->db->where("username = '$username' or email='$username'");
+            $this->db->where("username like '$username' or email like'$username'");
             $this->db->where('password',$pass);
-           
-            if($query=$this->db->get())
+            $pw = $this->db->query("select * from member where username like '$username' or email like'$username'")->row_array();
+            if(($query=$this->db->get()) and ($pass == $pw['password']))
             {
                 return $query->row_array();
             }

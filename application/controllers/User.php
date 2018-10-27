@@ -44,7 +44,6 @@
     public function login_user(){
         $user_login=[
             'username'=>$this->input->post('username'),
-            
             'password'=>md5($this->input->post('password'))
         ];
         $data = $this->user_model->login_user($user_login['username'],$user_login['password']);
@@ -62,7 +61,7 @@
         }
     }
     function user_profile(){
-        $this->load->view('user_profile.php');   
+        $this->load->view('User_profile.php');   
     }
 
     public function user_logout(){

@@ -69,5 +69,19 @@
         $this->session->sess_destroy();
         redirect('user/login_view', 'refresh');
       }
+    public function user_forgot(){
+        $this->load->view('forgot-password.php');  
+    }
+    public function reset_password(){
+        $email= $this->input->post('email');
+        $data = $this->user_model->reset_pw($email);
+        if($data){
+            $this->session->set_flashdata('success_msg', 'Email successfully.Now check to your email.');
+            redirect('User/user_forgot');
+        }else{
+            $this->session->set_flashdata('error_msg', 'Wrong Email');
+            $this->load->view("forgot-password.php");
+        }
+    }
 }
 ?>

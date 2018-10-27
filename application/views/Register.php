@@ -27,7 +27,7 @@
       <div class="card card-register mx-auto mt-5"><!-- row class is used for grid system in Bootstrap-->
           
               <div class="login-panel panel panel-success">
-              <div class="card-header"><h4>Register an Account</h4></div>
+              <div class="card-header"><h4><span ><a href="<?php echo site_url('home') ?>" text-decoration="none"><?php echo SITE_NAME?></a></span>~Register</h4></div>
                   <div class="card-body">
  
                   <?php
@@ -96,7 +96,7 @@
                       </form>
                       <div class="text-center">
                     <a class="d-block small mt-3" href="<?php echo site_url('User/login_view') ?>">Login Page</a>
-                    <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
+                    <a class="d-block small" href="<?php echo site_url('User/user_forgot') ?>">Forgot Password?</a>
                     </div> 
                   </div>
               </div>

@@ -21,7 +21,7 @@
   <body class="bg-dark">
     <div class="container">
     <div class="card card-login mx-auto mt-5">
-        <div class="card-header"><h4>Login</h4></div>
+        <div class="card-header"><h4><span ><a href="<?php echo site_url('home') ?>" text-decoration="none"><?php echo SITE_NAME?></a></span>~Login</h4></div>
         <div class="card-body">
                 <?php
               $success_msg= $this->session->flashdata('success_msg');
@@ -73,7 +73,7 @@
                     </form>
                     <div class="text-center">
                     <a class="d-block small mt-3" href="<?php echo site_url('User') ?>">Register an Account</a>
-                    <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
+                    <a class="d-block small" href="<?php echo site_url('User/user_forgot') ?>">Forgot Password?</a>
                     </div>
  
                 

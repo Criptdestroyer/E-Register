@@ -34,5 +34,16 @@
             }
            
           }
+          public function reset_pw($email){
+            $this->db->select('*');
+            $this->db->from('member');
+            $this->db->where("email = '$email'");
+            $query=$this->db->get();
+            if($query->num_rows()>0){
+                return true;
+              }else{
+                return false;
+              }
+          }
     }
 ?>

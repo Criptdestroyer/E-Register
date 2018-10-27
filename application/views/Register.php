@@ -95,7 +95,7 @@
                               <input class="btn btn-primary btn-block" type="submit" value="Register" name="register" >
                       </form>
                       <div class="text-center">
-                    <a class="d-block small mt-3" href="login.html">Login Page</a>
+                    <a class="d-block small mt-3" href="<?php echo site_url('User/login_view') ?>">Login Page</a>
                     <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
                     </div> 
                   </div>

@@ -4,11 +4,11 @@
         public function register_user($user){
             $this->db->insert('member', $user);
         }
-        public function login_user($email,$pass){
+        public function login_user($username,$pass){
  
             $this->db->select('*');
             $this->db->from('member');
-            $this->db->where('email',$email);
+            $this->db->where("username = '$username' or email='$username'");
             $this->db->where('password',$pass);
            
             if($query=$this->db->get())
@@ -21,10 +21,10 @@
            
            
           }
-          public function id_check($id){
+          public function _check($email,$username){
             $this->db->select('*');
             $this->db->from('member');
-            $this->db->where('member_id',$id);
+            $this->db->where("email = '$email' or username='$username'");
             $query=$this->db->get();
            
             if($query->num_rows()>0){

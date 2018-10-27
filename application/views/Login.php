@@ -72,7 +72,7 @@
                         
                     </form>
                     <div class="text-center">
-                    <a class="d-block small mt-3" href="register.html">Register an Account</a>
+                    <a class="d-block small mt-3" href="<?php echo site_url('User') ?>">Register an Account</a>
                     <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
                     </div>
  

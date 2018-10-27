@@ -1,7 +1,7 @@
 <?php
-$user_id=$this->session->userdata('user_id');
+$member_id=$this->session->userdata('member_id');
  
-if(!$user_id){
+if(!$member_id){
  
   redirect('user/login_view');
 }
@@ -49,7 +49,7 @@ if(!$user_id){
  
     </div>
   </div>
-<a href="<?php echo base_url('user/user_logout');?>" >  <button type="button" class="btn-primary">Logout</button></a>
+<a href="<?php echo site_url('User/user_logout');?>" >  <button type="button" class="btn-primary">Logout</button></a>
 </div>
   </body>
 </html>

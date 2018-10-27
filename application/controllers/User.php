@@ -25,7 +25,7 @@
             'no_hp'=>$this->input->post('no_hp')
         ];
         print_r($user);
-        $id_check=$this->user_model->id_check($user['member_id']);
+        $id_check=$this->user_model->_check($user['email'],$user['username']);
         if($id_check and ($user['password']==$confirmPassword)){
             $this->user_model->register_user($user);
             $this->session->set_flashdata('success_msg', 'Registered successfully.Now login to your account.');
@@ -34,7 +34,7 @@
             $this->session->set_flashdata('error_msg', 'Password and Confirm Password it\'s different');
             redirect('user');
         }else{
-            $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
+            $this->session->set_flashdata('error_msg', 'Username or Email Already Used');
             redirect('user');
         }
     }
@@ -43,10 +43,11 @@
     }
     public function login_user(){
         $user_login=[
-            'email'=>$this->input->post('email'),
+            'username'=>$this->input->post('username'),
+            
             'password'=>md5($this->input->post('password'))
         ];
-        $data = $this->user_model->login_user($user_login['email'],$user_login['password']);
+        $data = $this->user_model->login_user($user_login['username'],$user_login['password']);
         if($data){
             $this->session->set_userdata('member_id',$data['member_id']);
             $this->session->set_userdata('email',$data['email']);
@@ -54,7 +55,7 @@
             $this->session->set_userdata('username',$data['username']);
             $this->session->set_userdata('no_hp',$data['no_hp']);
  
-            $this->load->view('user_profile.php');
+            $this->load->view('User_profile');
         }else{
             $this->session->set_flashdata('error_msg', 'Wrong Username or Password');
             $this->load->view("Login.php");

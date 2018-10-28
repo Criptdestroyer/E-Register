@@ -9,7 +9,7 @@
         public function index(){
             //load view admin/overview.php
             $data["customers"] = $this->customers_model->getAll();
-            $this->load->view("admin/overview",$data);
+            $this->load->view("admin/overview",$data);;
         }
         
     }

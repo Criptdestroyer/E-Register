@@ -1,3 +1,11 @@
+<?php
+$admin_id=$this->session->userdata('admin_id');
+ 
+if(!$admin_id){
+ 
+  redirect('admin/admin/login_view');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

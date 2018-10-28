@@ -59,8 +59,8 @@ header.masthead {
   overflow: hidden;
   padding-top: calc(7rem + 72px);
   padding-bottom: 7rem;
-  background: -webkit-gradient(linear, left bottom, left top, from(#ff6a00), to(#ee0979));
-  background: linear-gradient(0deg, #ff6a00 0%, #ee0979 100%);
+  /*background: -webkit-gradient(linear, left bottom, left top, from(#ff6a00), to(#ee0979));
+  background: linear-gradient(0deg, #ff6a00 0%, #ee0979 100%);*/
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
@@ -116,6 +116,16 @@ header.masthead .bg-circle-4 {
   right: 35%;
 }
 
+.myev{
+  background: -webkit-gradient(linear, left bottom, left top, from(#ee0979), to(#ff6a00));
+  background: linear-gradient(0deg, #ee0979 0%, #ff6a00 100%);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 5px solid red;
+}
+
+
+
 @media (min-width: 992px) {
   header.masthead {
     padding-top: calc(10rem + 55px);
@@ -128,6 +138,11 @@ header.masthead .bg-circle-4 {
     font-size: 4rem;
   }
 }
+
+.dicenterin,.waktu{
+  text-align: center;
+}
+
 
 .bg-primary {
   background-color: #ee0979 !important;

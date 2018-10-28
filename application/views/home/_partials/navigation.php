@@ -11,7 +11,7 @@
               <a class="nav-link" href="<?php echo site_url('Home/pesan') ?>">Event</a>
             </li>
           <li class="nav-item">
-              <a class="nav-link" href="#<?php// echo site_url('User/index') ?>">Cek Pesanan</a>
+              <a class="nav-link" href="#<?php echo site_url('User/index') ?>">Cek Pesanan</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?php echo site_url('User/user_profile') ?>">Profile</a>

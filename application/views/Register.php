@@ -1,3 +1,11 @@
+<?php
+$member_id=$this->session->userdata('member_id');
+ 
+if($member_id){
+  redirect('user/user_profile');
+}
+?>
+
 <!DOCTYPE html>
 <html>
   <head>

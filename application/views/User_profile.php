@@ -2,7 +2,6 @@
 $member_id=$this->session->userdata('member_id');
  
 if(!$member_id){
- 
   redirect('user/login_view');
 }
  
@@ -30,6 +29,7 @@ if(!$member_id){
 <link href="<?php echo base_url('css/sb-admin.css')?>" rel="stylesheet">
   </head>
   <body class="bg-light">
+       <?php $this->load->view("admin/_partials/navbar.php") ?>
  
 <div class="container mt-5">
   <div class="row">
@@ -67,5 +67,12 @@ if(!$member_id){
 </div>
 
 </div>
+     <!-- Scroll to Top Button-->
+     <?php $this->load->view("admin/_partials/scrolltop.php") ?>
+
+<!-- Logout Modal-->
+<?php $this->load->view("admin/_partials/modal.php") ?>
+
+<?php $this->load->view("admin/_partials/js.php") ?>
   </body>
 </html>

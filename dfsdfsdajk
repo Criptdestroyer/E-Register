@@ -1,0 +1,125 @@
+[33mcommit 634d1bb03443145ca7669aac88ea9e44e9084c51[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31msrifoton/master[m[33m, [m[1;31me-register/master[m[33m)[m
+Author: root <ahmademir1201@gmail.com>
+Date:   Sun Oct 28 11:40:10 2018 +0700
+
+    login admin done
+
+[33mcommit 1b28e6550d70a54e265059faaca3af1bebcec6dd[m
+Author: root <ahmademir1201@gmail.com>
+Date:   Sun Oct 28 09:48:33 2018 +0700
+
+    route
+
+[33mcommit dc2f92ed9f2c98b3e7d79ed8f785bafa89bdc640[m
+Author: root <ahmademir1201@gmail.com>
+Date:   Sun Oct 28 09:31:29 2018 +0700
+
+    event
+
+[33mcommit 3cfb872b588a797b765b9bc2ed25591834acd9d0[m
+Author: root <ahmademir1201@gmail.com>
+Date:   Sun Oct 28 02:28:36 2018 +0700
+
+    header
+
+[33mcommit 2665d94c13e760b1d31c471504775c474c9d0807[m
+Author: root <ahmademir1201@gmail.com>
+Date:   Sat Oct 27 22:38:01 2018 +0700
+
+    fixing bug login
+
+[33mcommit 911f3747d94536ab9f76a6d2308a9202a6f77890[m
+Author: root <ahmademir1201@gmail.com>
+Date:   Sat Oct 27 20:47:42 2018 +0700
+
+    user profile
+
+[33mcommit 3f74b9dfeba9b8abed7cf0e2b3f39c290cd560c1[m
+Author: root <ahmademir1201@gmail.com>
+Date:   Sat Oct 27 07:36:13 2018 +0700
+
+    forgot-password
+
+[33mcommit 3d465330ce8cc8a368819c3fcd297a78f729f423[m
+Author: root <ahmademir1201@gmail.com>
+Date:   Sat Oct 27 07:07:43 2018 +0700
+
+    login and profile
+
+[33mcommit 557e562ae667633322415c8b87d37d88070b6a6d[m
+Author: root <ahmademir1201@gmail.com>
+Date:   Sat Oct 27 06:38:58 2018 +0700
+
+    fixing bug register
+
+[33mcommit 9be650360b4608d8bf39cbf78197f549e05ed176[m
+Author: root <ahmademir1201@gmail.com>
+Date:   Sat Oct 27 01:32:56 2018 +0700
+
+    register done
+
+[33mcommit 38c4cc9dfc8640bca3f8672acdb824036ec13ba8[m
+Author: root <ahmademir1201@gmail.com>
+Date:   Fri Oct 26 18:21:39 2018 +0700
+
+    template home
+
+[33mcommit 1a87a70c3e7f094a3af29b14fc2ee0a45c427054[m
+Author: root <ahmademir1201@gmail.com>
+Date:   Fri Oct 26 16:16:53 2018 +0700
+
+    upload done
+
+[33mcommit ecd142caafab8150168c864af74140d265f0a8dd[m
+Author: root <ahmademir1201@gmail.com>
+Date:   Fri Oct 26 15:22:39 2018 +0700
+
+    crud done
+
+[33mcommit 2e039f46736668d890c996a3d397d6339402cdfe[m
+Author: root <ahmademir1201@gmail.com>
+Date:   Fri Oct 26 14:19:34 2018 +0700
+
+    button error done
+
+[33mcommit 34cabee4a31d68ca9cd80adbf2620fdac67addf0[m
+Author: root <ahmademir1201@gmail.com>
+Date:   Fri Oct 26 00:17:29 2018 +0700
+
+    error button update&delete
+
+[33mcommit a065c1896e8ebb047671f7f0bd6b926ae2c01def[m
+Author: root <ahmademir1201@gmail.com>
+Date:   Thu Oct 25 23:18:34 2018 +0700
+
+    fix bug php error
+
+[33mcommit 4999a79ed2e4001e246ebf5dc7b6cc5155d815fc[m
+Author: root <ahmademir1201@gmail.com>
+Date:   Thu Oct 25 22:59:21 2018 +0700
+
+    view
+
+[33mcommit ad3486fa565b588211f5c22188cb1d0f53f7de08[m
+Author: root <ahmademir1201@gmail.com>
+Date:   Thu Oct 25 21:55:37 2018 +0700
+
+    controller
+
+[33mcommit 81c15dd508370edc452b722bfe3fcb6a41bd3411[m
+Author: root <ahmademir1201@gmail.com>
+Date:   Thu Oct 25 21:17:28 2018 +0700
+
+    Model
+
+[33mcommit 94fa7fc5277ba5e9b86606e3d2b55c251953d4c9[m
+Author: root <ahmademir1201@gmail.com>
+Date:   Thu Oct 25 17:23:31 2018 +0700
+
+    partials
+
+[33mcommit 0766f37d5fac8b076575e631ee3869b04ad74987[m
+Author: root <ahmademir1201@gmail.com>
+Date:   Thu Oct 25 16:02:40 2018 +0700
+
+    view admin

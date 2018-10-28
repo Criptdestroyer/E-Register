@@ -2,7 +2,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    
+
     <title><?php echo SITE_NAME.": ". ucfirst($this->uri->segment(1)." - ".ucfirst($this->uri->segment(2))) ?></title>
 
     <!-- Bootstrap core CSS -->
@@ -13,4 +13,4 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="<?php echo base_url('css/one-page-wonder.min.css')?>" rel="stylesheet">
+    <link href="<?php echo base_url('css/one-page-wonder.css')?>" rel="stylesheet">

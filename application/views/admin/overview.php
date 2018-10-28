@@ -114,7 +114,7 @@ if(!$admin_id){
 
           
         <!-- /.container-fluid -->
-        <?php $this->load->view("admin/customer/data.php") ?>
+        <?php $this->load->view("admin/event/data.php") ?>
         <!-- Sticky Footer -->
         <?php $this->load->view("admin/_partials/footer.php") ?>
 

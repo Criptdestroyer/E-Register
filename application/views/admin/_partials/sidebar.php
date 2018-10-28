@@ -13,7 +13,7 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="pagesDropdown">
             <h6 class="dropdown-header">Customers:</h6>
-            <a class="dropdown-item" href="<?php echo site_url('admin/customers/add') ?>">New Customers</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/event') ?>">List Event</a>
             <a class="dropdown-item" href="<?php echo site_url('admin/customers') ?>">List Customers</a>    
             
           </div>

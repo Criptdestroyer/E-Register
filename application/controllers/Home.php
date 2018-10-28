@@ -6,5 +6,8 @@
         public function index(){
             $this->load->view("home/home");
         }
+        public function pesan(){
+            $this->load->view('home/pesan');
+        }
     }
 ?>

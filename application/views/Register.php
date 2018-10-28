@@ -27,7 +27,7 @@
       <div class="card card-register mx-auto mt-5"><!-- row class is used for grid system in Bootstrap-->
           
               <div class="login-panel panel panel-success">
-              <div class="card-header"><h4><span ><a href="<?php echo site_url('home') ?>" text-decoration="none"><?php echo SITE_NAME?></a></span>~Register</h4></div>
+              <div class="card-header"><h4><span ><a href="<?php echo site_url('home/index') ?>" text-decoration="none"><?php echo SITE_NAME?></a></span>~Register</h4></div>
                   <div class="card-body">
  
                   <?php

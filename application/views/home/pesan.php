@@ -24,7 +24,7 @@
               <div class="panel panel-default card">
 
               <div class="panel-heading post-thumb">
-                  <img class="img img-responsive" src="<?php echo base_url('img/EvPhoto.jpg')?>" />
+                  <img class="img img-responsive" src="<?php// echo base_url('img/EvPhoto.jpg')?>" />
               </div>
 
               <div class="panel-body post-body">
@@ -47,27 +47,31 @@
             </div>
       </div>
     </section>-->
-
+  
     <section>
+    
       <div class="container mb-3 mt-2">
+      <?php foreach ($events as $events) {?>
         <div class="card evcard" style="width: 18rem;">
-          <img class="card-img-top" src="<?php echo base_url('img/EvPhoto.jpg')?>" alt="Card image cap">
+          <img class="card-img-top" src="<?php echo base_url('upload/event/'.$events->photo)?>" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Title</h5>
+            <h5 class="card-title"><?php echo $events->title ?></h5>
             <div class="card-title tanggal" style="color:red;">
-              dd-Month-yyyy <br/>
-              Place
+            <?php echo $events->updated_at ?><br/>
+            <?php echo $events->details ?>
             </div>
-            <p class="card-text desc">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text desc"><?php echo substr($events->description, 0, 120) ?>...</p>
           </div>
           <div class=" card-header beliinfobutton">
             <a href="#" class="btn btn-success" role="button">Beli Tiket</a>
             <a href="<?php echo site_url('Home/info') ?>" class="btn btn-info" role="button">Info</a>
           </div>
       </div>
+      <?php } ?>
       </div>
+      
     </section>
-
+  
 
     <!-- Footer -->
     <?php $this->load->view("home/_partials/footer.php") ?>

@@ -9,7 +9,8 @@
             $this->load->view("home/home",$data);
         }
         public function pesan(){
-            $this->load->view('home/pesan');
+            $data["events"] = $this->event_model->getAll();
+            $this->load->view('home/pesan',$data);
         }
 
         public function info(){

@@ -27,8 +27,8 @@
               <div class="col-lg-5 bg-warning waktu">12 Desember 2017</div>
               <p>Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
               <div class="beliinfobutton">
-                <button type="button" class="btn btn-success">Beli Tiket</button>
-                <button type="button" class="btn btn-info">Info</button>
+                <a href="#" class="btn btn-success" role="button">Beli Tiket</a>
+                <a href="#" class="btn btn-info" role="button">Info</a>
               </div>
             </div>
           </div>
@@ -50,8 +50,8 @@
               <div class="col-lg-5 bg-warning waktu">12 Desember 2017</div>
               <p>Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
               <div class="beliinfobutton">
-                <button type="button" class="btn btn-success">Beli Tiket</button>
-                <button type="button" class="btn btn-info">Info</button>
+                <a href="#" class="btn btn-success" role="button">Beli Tiket</a>
+                <a href="#" class="btn btn-info" role="button">Info</a>
               </div>
             </div>
           </div>
@@ -73,8 +73,8 @@
               <div class="col-lg-5 bg-warning waktu">12 Desember 2017</div>
               <p>Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
               <div class="beliinfobutton">
-                <button type="button" class="btn btn-success">Beli Tiket</button>
-                <button type="button" class="btn btn-info">Info</button>
+                <a href="#" class="btn btn-success" role="button">Beli Tiket</a>
+                <a href="#" class="btn btn-info" role="button">Info</a>
               </div>
             </div>
           </div>

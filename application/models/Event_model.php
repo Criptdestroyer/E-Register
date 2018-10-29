@@ -54,7 +54,7 @@
             if(!empty($_FILES["photo"]["name"])){
                 $this->photo = $this->_uploadImage();
             }else{
-                $this->photo = $post["photo"];
+                $this->photo = $this->db->query("select photo from events where event_id='$this->event_id'");
             }
             $this->db->update($this->_table,$this,array('event_id'=>$post['event_id']));
         }

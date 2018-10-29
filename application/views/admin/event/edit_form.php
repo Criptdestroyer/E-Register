@@ -62,7 +62,7 @@
 										 $bln = $date[1];
 										 $thn = $date[0];
 									 	for ($i=1; $i <= 31 ; $i++) { 
-											 echo "<option value='$tgl'>$tgl</option>";
+											 echo "<option value='$tgl'>$i</option>";
 										 }
 									 ?>
 								</select>
@@ -71,7 +71,7 @@
 									 <?php
 										 
 									 	for ($i=1; $i <= 12 ; $i++) { 
-											 echo "<option value='$tbln'>$bln</option>";
+											 echo "<option value='$bln'>$i</option>";
 										 }
 									 ?>
 								</select>
@@ -79,7 +79,7 @@
 								 name="thn">
 									 <?php
 									 	for ($i=2020; $i >= 2000 ; $i--) { 
-											 echo "<option value='$thn'>$thn</option>";
+											 echo "<option value='$thn'>$i</option>";
 										 }
 									 ?>
 								</select>

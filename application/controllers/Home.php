@@ -9,5 +9,9 @@
         public function pesan(){
             $this->load->view('home/pesan');
         }
+
+        public function info(){
+          $this->load->view('home/singleevent');
+        }
     }
 ?>

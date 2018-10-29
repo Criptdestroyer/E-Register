@@ -76,6 +76,7 @@ header.masthead .masthead-content .masthead-heading {
   font-size: 4rem;
 }
 
+
 header.masthead .masthead-content .masthead-subheading {
   font-size: 2rem;
 }
@@ -176,4 +177,55 @@ header.masthead .bg-circle-4 {
 .btn-secondary:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 106, 0, 0.5);
   box-shadow: 0 0 0 0.2rem rgba(255, 106, 0, 0.5);
+}
+
+/* tinggi card
+.post-body {
+    height: 215px;
+    position: relative;
+    padding: 20px 15px 0;
+}
+
+/* untuk menghilangkan padding pada .panel-heading
+.post-thumb {
+    padding: 0;
+}
+
+
+/* mengatur font dan link judul artikel
+.post-title a {
+    color: rgba(0,0,0,0.7);
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.5em;
+    letter-spacing: 0.01rem;
+}
+.post-title a:hover { text-decoration: none }
+
+/* posisi author selalu di bawah
+.post-author {
+    left: 15px;
+    font-size: 13px;
+}
+
+.post-desc {
+    left: 15px;
+    font-size: 13px;
+}
+
+.post-author {
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.panel-default{
+  margin-bottom: 20px;
+}
+
+.desc{
+  font-size: 1em;;
+}*/
+.evcard{
+  background: -webkit-gradient(linear, left bottom, left top, from(#8552cc), to(#c22966));
+  background-color: linear-gradient(#8552cc,#c22966);
 }

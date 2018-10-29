@@ -2,9 +2,11 @@
     class Home extends CI_Controller{
         public function __construct(){
             parent::__construct();
+            $this->load->model("event_model");
         }
         public function index(){
-            $this->load->view("home/home");
+            $data["events"] = $this->event_model->getAll();
+            $this->load->view("home/home",$data);
         }
         public function pesan(){
             $this->load->view('home/pesan');

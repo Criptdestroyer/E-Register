@@ -60,7 +60,7 @@
             </div>
             <p class="card-text desc">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           </div>
-          <div class=" card-header beliinfobutton">
+          <div class="card-header beliinfobutton">
             <a href="#" class="btn btn-success" role="button">Beli Tiket</a>
             <a href="<?php echo site_url('Home/info') ?>" class="btn btn-info" role="button">Info</a>
           </div>

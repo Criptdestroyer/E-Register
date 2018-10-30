@@ -229,3 +229,13 @@ header.masthead .bg-circle-4 {
   background: -webkit-gradient(linear, left bottom, left top, from(#8552cc), to(#c22966));
   background-color: linear-gradient(#8552cc,#c22966);
 }
+
+.event-photo{
+  margin-top: 4.5em;
+  text-align: center;
+}
+
+.keterangan{
+  background: linear-gradient(to right, #00cc99 0%, #99ff33 100%);
+  padding: 30px;
+}

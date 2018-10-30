@@ -62,7 +62,7 @@
             </div>
             <p class="card-text desc"><?php echo substr($events->description, 0, 120) ?>...</p>
           </div>
-          <div class=" card-header beliinfobutton">
+          <div class="card-header beliinfobutton">
             <a href="#" class="btn btn-success" role="button">Beli Tiket</a>
             <a href="<?php echo site_url('Home/info') ?>" class="btn btn-info" role="button">Info</a>
           </div>

@@ -47,11 +47,11 @@
             </div>
       </div>
     </section>-->
-  
+    <?php foreach ($events as $events) {?>
     <section>
     
       <div class="container mb-3 mt-2">
-      <?php foreach ($events as $events) {?>
+      
         <div class="card evcard" style="width: 18rem;">
           <img class="card-img-top" src="<?php echo base_url('upload/event/'.$events->photo)?>" alt="Card image cap">
           <div class="card-body">
@@ -67,11 +67,11 @@
             <a href="<?php echo site_url('Home/info') ?>" class="btn btn-info" role="button">Info</a>
           </div>
       </div>
-      <?php } ?>
+      
       </div>
       
     </section>
-  
+    <?php } ?>
 
     <!-- Footer -->
     <?php $this->load->view("home/_partials/footer.php") ?>

@@ -15,7 +15,7 @@
   <section>
     <div class="container event-photo">
       <div class="col-md-12">
-        <img class="img-responsive" style="" src="<?php echo base_url('upload/event/'.$events->photo);?>" alt="this-event"/>
+        <img class="img-responsive" src="<?php echo base_url('upload/event/'.$events->photo);?>" alt="this-event"/>
       </div>
     </div>
   </section>

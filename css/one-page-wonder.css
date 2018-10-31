@@ -179,6 +179,94 @@ header.masthead .bg-circle-4 {
   box-shadow: 0 0 0 0.2rem rgba(255, 106, 0, 0.5);
 }
 
+.evcard{
+  background: -webkit-gradient(linear, left bottom, left top, from(#8552cc), to(#c22966));
+  background-color: linear-gradient(#8552cc,#c22966);
+}
+
+.event-photo{
+  margin-top: 4.5em;
+  text-align: center;
+}
+
+.keterangan{
+  background: linear-gradient(to right, #00cc99 0%, #99ff33 100%);
+  padding: 30px;
+}
+
+.submitreset{
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  height: auto;
+  width: 80px;
+  /*background-color: yellow;*/
+}
+
+/*Button tambah kurang*/
+.qty .count {
+    color: #000;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    padding: 0 2px
+    ;min-width: 35px;
+    text-align: center;
+}
+.qty .plus {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font: 30px/1 Arial,sans-serif;
+    text-align: center;
+    border-radius: 50%;
+    }
+.qty .minus {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font: 30px/1 Arial,sans-serif;
+    text-align: center;
+    border-radius: 50%;
+    background-clip: padding-box;
+}
+div {
+    text-align: center;
+}
+.minus:hover{
+    background-color: #717fe0 !important;
+}
+.plus:hover{
+    background-color: #717fe0 !important;
+}
+/*Prevent text selection*/
+span{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+input{
+    border: 0;
+    width: 2%;
+}
+nput::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input:disabled{
+    background-color:white;
+}
+
+
 /* tinggi card
 .post-body {
     height: 215px;
@@ -225,17 +313,3 @@ header.masthead .bg-circle-4 {
 .desc{
   font-size: 1em;;
 }*/
-.evcard{
-  background: -webkit-gradient(linear, left bottom, left top, from(#8552cc), to(#c22966));
-  background-color: linear-gradient(#8552cc,#c22966);
-}
-
-.event-photo{
-  margin-top: 4.5em;
-  text-align: center;
-}
-
-.keterangan{
-  background: linear-gradient(to right, #00cc99 0%, #99ff33 100%);
-  padding: 30px;
-}

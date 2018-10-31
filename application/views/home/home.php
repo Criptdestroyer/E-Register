@@ -27,8 +27,7 @@
               <div class="col-lg-5 bg-warning waktu"><?php echo $events->updated_at ?></div>
               <p><?php echo $events->description ?></p>
               <div class="beliinfobutton">
-                <a href="#" class="btn btn-success" role="button">Beli Tiket</a>
-                <a href="#" class="btn btn-info" role="button">Info</a>
+                <a href="#" class="btn btn-success" role="button">More Info</a>
               </div>
             </div>
           </div>
@@ -36,7 +35,7 @@
       </div>
     </section>
   <?php } ?>
-    
+
 
   <div class="dicenterin">
       <a href="" class="btn btn-primary btn-xl rounded-pill mb-3">Explore Events</a>

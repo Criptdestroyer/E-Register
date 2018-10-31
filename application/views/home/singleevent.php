@@ -39,7 +39,13 @@
                 <p class="waktuSE"><i class="far fa-clock"></i> 08.00</p>
                 <p class="tempat"><i class="fas fa-map-marker-alt"></i> <?php echo $events->details ?></p>
                 <hr>
-                <p class="harga" style="font-weight:bold;color:yellow;font-size:20px">Rp. 100.000</p>
+                <?php
+                    $query = $this->db->query('select * from tiket')->result();
+                    foreach ($query as $query) {
+                        if($events->event_id == $query->id_event){
+                            echo "<p class='harga' style='font-weight:bold;color:yellow;font-size:20px'>".$query->jenis_tiket.": ".$query->harga."</p>";
+                        }} ?>
+
               </div>
             ,<!--  <a href="#" class="btn btn-primary" role="button">Beli Tiket</a> -->
             </div>
@@ -84,19 +90,18 @@
                           <td>Jenis tiket</td>
                           <td>
                               <select name="jenis_tiket">
-                                  <option value="VIP">
-                                      VIP
-                                  </option>
-                                  <option value="Reguler">
-                                      Reguler
-                                  </option>
+                              <?php
+                              $query = $this->db->query('select * from tiket')->result();
+                              $temp;
+                              foreach ($query as $query) {
+                              if($events->event_id == $query->id_event){
+                              echo "<option value='".$query->jenis_tiket."'>".$query->jenis_tiket."</option>";
+                                $temp =$query->jenis_tiket;
+                              }} ?>
                               </select>
                           </td>
                       </tr>
-                      <tr>
-                          <td>Harga</td>
-                          <td style="color:blue">Rp 0</td>
-                      </tr>
+
                       <tr>
                           <td>Jumlah Tiket</td>
                           <td>
@@ -105,11 +110,7 @@
                             <button type="button" class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</button>
                           </td>
                       </tr>
-                      <tr>
-                        <td colspan="2" style="text-align:center">Anda harus membayar<br/>
-                            <span style="color:blue; font-size:30px; font-weight:bold">Rp 0</span>
-                        </td>
-                      </tr>
+                      <br>
                       <tr style="text-align:center;">
                         <td colspan="2"><input type="submit" value="Beli" name="submit" class="submitreset bg-primary"/>
                           <input type="reset" value="Reset" name="reset" class="submitreset bg-primary"/></td>

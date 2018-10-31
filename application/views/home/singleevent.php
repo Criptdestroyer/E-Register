@@ -12,6 +12,7 @@
   <?php foreach ($events as $events) {
     if($events->event_id == $_GET['id']){
    ?>
+
   <section>
     <div class="container event-photo">
       <div class="col-md-12">
@@ -38,32 +39,109 @@
                 <p class="waktuSE"><i class="far fa-clock"></i> 08.00</p>
                 <p class="tempat"><i class="fas fa-map-marker-alt"></i> <?php echo $events->details ?></p>
                 <hr>
-                <p class="harga">Rp. 100.000</p>
+                <p class="harga" style="font-weight:bold;color:yellow;font-size:20px">Rp. 100.000</p>
               </div>
-              <a href="#" class="btn btn-primary" role="button">Beli Tiket</a>
+            ,<!--  <a href="#" class="btn btn-primary" role="button">Beli Tiket</a> -->
             </div>
           </div>
           <div class="col-md-8">
-            <div class="deskripsi">
-            <?php echo $events->description ?>
+            <nav>
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Deskripsi</a>
+                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Kebijakan</a>
+                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Beli</a>
+              </div>
+            </nav>
+            <div class="tab-content mt-4" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="deskripsi">
+                <?php echo $events->description ?>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div class="Kebijakan">
+                    <h6>Kebijakan dan Biaya Event</h6>
+                    <ul>
+                        <li>Nananananananananananana</li>
+                        <li>Nananananananananananana</li>
+                        <li>Nananananananananananana</li>
+                        <li>Nananananananananananana</li>
+                        <li>Nananananananananananana</li>
+                        <li>Nananananananananananana</li>
+                        <li>Nananananananananananana</li>
+                    </ul>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <div class="beli-tiket">
+                  <table>
+                    <form method="post" action="#">
+                      <tr>
+                          <td>Event</td>
+                          <td style="font-weight:bold;"><?php echo $events->title ?></td>
+                      </tr>
+                      <tr>
+                          <td>Jenis tiket</td>
+                          <td>
+                              <select name="jenis_tiket">
+                                  <option value="VIP">
+                                      VIP
+                                  </option>
+                                  <option value="Reguler">
+                                      Reguler
+                                  </option>
+                              </select>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>Harga</td>
+                          <td style="color:blue">Rp 0</td>
+                      </tr>
+                      <tr>
+                          <td>Jumlah Tiket</td>
+                          <td>
+                            <div class="qty mt-5">
+                              <span class="minus bg-dark">-</span>
+                              <input type="number" class="count" name="qty" value="1">
+                              <span class="plus bg-dark">+</span>
+                           </div>
+                          </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" style="text-align:center">Anda harus membayar<br/>
+                            <span style="color:blue; font-size:30px; font-weight:bold">Rp 0</span>
+                        </td>
+                      </tr>
+                      <tr style="text-align:center;">
+                        <td><input type="submit" value="Beli" name="submit" class="submitreset bg-primary"/></td>
+                        <td><input type="reset" value="Reset" name="reset" class="submitreset bg-primary"/></td>
+                      </tr>
+                    </form>
+                  </table>
+                </div>
+              </div>
             </div>
             <hr>
-            <div class="Kebijakan">
-                <h6>Kebijakan dan Biaya Event</h6>
-                <ul>
-                    <li>Nananananananananananana</li>
-                    <li>Nananananananananananana</li>
-                    <li>Nananananananananananana</li>
-                    <li>Nananananananananananana</li>
-                    <li>Nananananananananananana</li>
-                    <li>Nananananananananananana</li>
-                    <li>Nananananananananananana</li>
-                </ul>
-            </div>
           </div>
         </div>
     </div>
   </section>
+
+  <script type="text/javascript">
+      $(document).ready(function(){
+        $('.count').prop('disabled', true);
+        $(document).on('click','.plus',function(){
+        $('.count').val(parseInt($('.count').val()) + 1 );
+      });
+        $(document).on('click','.minus',function(){
+        $('.count').val(parseInt($('.count').val()) - 1 );
+          if ($('.count').val() == 0) {
+          $('.count').val(1);
+        }
+          });
+      });
+  </script>
+
 <?php }} ?>
     <!-- Footer -->
     <?php $this->load->view("home/_partials/footer.php") ?>

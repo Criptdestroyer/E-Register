@@ -49,11 +49,11 @@
     </section>-->
     <?php foreach ($events as $events) {?>
     <section>
-    
+
       <div class="container mb-3 mt-2">
-      
+
         <div class="card evcard" style="width: 18rem;">
-          <img class="card-img-top" src="<?php echo base_url('upload/event/'.$events->photo)?>" alt="Card image cap">
+          <img class="card-img-top img-responsive" src="<?php echo base_url('upload/event/'.$events->photo)?>" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title"><?php echo $events->title ?></h5>
             <div class="card-title tanggal" style="color:red;">
@@ -63,15 +63,14 @@
             <p class="card-text desc"><?php echo substr($events->description, 0, 120) ?>...</p>
           </div>
           <div class="card-header beliinfobutton">
-            <a href="#" class="btn btn-success" role="button">Beli Tiket</a>
-            
-            <a href="<?php echo site_url('Home/info?id='.$events->event_id) ?>" class="btn btn-info" role="button">Info</a>
-            
+
+            <a href="<?php echo site_url('Home/info?id='.$events->event_id) ?>" class="btn btn-info" role="button">More Info</a>
+
           </div>
       </div>
-      
+
       </div>
-      
+
     </section>
     <?php } ?>
 

@@ -15,8 +15,8 @@
 
   <section>
     <div class="container event-photo">
-      <div class="col-md-12">
-        <img class="img-responsive" style="" src="<?php echo base_url('upload/event/'.$events->photo);?>" alt="this-event"/>
+      <div class="col-md-12" style="height:375px;">
+        <img class="img-fluid myimage" style="" src="<?php echo base_url('upload/event/'.$events->photo);?>" alt="this-event"/>
       </div>
     </div>
   </section>
@@ -100,11 +100,9 @@
                       <tr>
                           <td>Jumlah Tiket</td>
                           <td>
-                            <div class="qty mt-5">
-                              <span class="minus bg-dark">-</span>
-                              <input type="number" class="count" name="qty" value="1">
-                              <span class="plus bg-dark">+</span>
-                           </div>
+                            <button type="button" class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</button>
+                            <input type="text" id="number" value="0" style="width:40px; text-align:center;" />
+                            <button type="button" class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</button>
                           </td>
                       </tr>
                       <tr>
@@ -113,8 +111,8 @@
                         </td>
                       </tr>
                       <tr style="text-align:center;">
-                        <td><input type="submit" value="Beli" name="submit" class="submitreset bg-primary"/></td>
-                        <td><input type="reset" value="Reset" name="reset" class="submitreset bg-primary"/></td>
+                        <td colspan="2"><input type="submit" value="Beli" name="submit" class="submitreset bg-primary"/>
+                          <input type="reset" value="Reset" name="reset" class="submitreset bg-primary"/></td>
                       </tr>
                     </form>
                   </table>
@@ -128,18 +126,20 @@
   </section>
 
   <script type="text/javascript">
-      $(document).ready(function(){
-        $('.count').prop('disabled', true);
-        $(document).on('click','.plus',function(){
-        $('.count').val(parseInt($('.count').val()) + 1 );
-      });
-        $(document).on('click','.minus',function(){
-        $('.count').val(parseInt($('.count').val()) - 1 );
-          if ($('.count').val() == 0) {
-          $('.count').val(1);
-        }
-          });
-      });
+    function increaseValue() {
+      var value = parseInt(document.getElementById('number').value, 10);
+      value = isNaN(value) ? 0 : value;
+      value++;
+      document.getElementById('number').value = value;
+      }
+
+      function decreaseValue() {
+      var value = parseInt(document.getElementById('number').value, 10);
+      value = isNaN(value) ? 0 : value;
+      value < 1 ? value = 1 : '';
+      value--;
+      document.getElementById('number').value = value;
+    }
   </script>
 
 <?php }} ?>

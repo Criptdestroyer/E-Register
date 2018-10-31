@@ -60,6 +60,7 @@
         }
         public function delete($id){
             $this->_deleteImage($id);
+            $this->db->delete("tiket",array("id_event"=>$id));
             return $this->db->delete($this->_table,array("event_id"=>$id));
         }
         private function _uploadImage(){

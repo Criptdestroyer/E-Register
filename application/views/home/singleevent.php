@@ -82,6 +82,7 @@
                 <div class="beli-tiket">
                   <table>
                     <form method="post" action="#">
+                    <input type="hidden" name="event_id" value="<?php echo $events->event_id?>" />
                       <tr>
                           <td>Event</td>
                           <td style="font-weight:bold;"><?php echo $events->title ?></td>
@@ -102,14 +103,14 @@
                           </td>
                       </tr>
 
-                      <tr>
+                      <!-- <tr>
                           <td>Jumlah Tiket</td>
                           <td>
                             <button type="button" class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</button>
                             <input type="text" id="number" value="0" style="width:40px; text-align:center;" />
                             <button type="button" class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</button>
                           </td>
-                      </tr>
+                      </tr> -->
                       <br>
                       <tr style="text-align:center;">
                         <td colspan="2"><input type="submit" value="Beli" name="submit" class="submitreset bg-primary"/>

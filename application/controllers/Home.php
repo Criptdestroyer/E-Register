@@ -21,5 +21,9 @@
         public function checkout(){
           $this->load->view('home/Checkout');
         }
+
+        public function transaksisukses(){
+          $this->load->view('home/TransaksiSukses');
+        }
     }
 ?>

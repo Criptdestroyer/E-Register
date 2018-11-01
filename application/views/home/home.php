@@ -38,7 +38,7 @@
 
 
   <div class="dicenterin">
-      <a href="" class="btn btn-primary btn-xl rounded-pill mb-3">Explore Events</a>
+      <a href="" class="btn btn-primary btn-xl rounded-pill mb-3">More Events</a>
   </div>
 
     <!-- Footer -->

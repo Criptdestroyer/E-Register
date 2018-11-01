@@ -42,7 +42,8 @@
             <p class="harga">Rp 0</p>
           </div>
           <div class="bagian_tombol" style="text-align:center;">
-            <a href="" class="btn btn-info" role="button">This Is Button</a>
+            <a href="<?php echo site_url('Home/transaksisukses'); ?>" class="btn btn-info" role="button">Bayar</a>
+            <a href="" class="btn btn-danger" role="button">Batal</a>
           </div>
       </form>
       </div>

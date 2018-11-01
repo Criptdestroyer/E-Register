@@ -50,8 +50,7 @@
     <?php foreach ($events as $events) {?>
     <section>
 
-      <div class="container mb-3 mt-2">
-
+      <div class="col-md-3 mt-2 mb-2">
         <div class="card evcard" style="width: 18rem;">
           <img class="card-img-top img-responsive" src="<?php echo base_url('upload/event/'.$events->photo)?>" alt="Card image cap">
           <div class="card-body">

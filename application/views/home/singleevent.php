@@ -81,7 +81,8 @@
               <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                 <div class="beli-tiket">
                   <table>
-                    <form method="post" action="#">
+                    
+                    <form method="post" action="<?php echo site_url('Home/checkout') ?>">
                     <input type="hidden" name="event_id" value="<?php echo $events->event_id?>" />
                       <tr>
                           <td>Event</td>
@@ -115,6 +116,7 @@
                       <tr style="text-align:center;">
                         <td colspan="2"><input type="submit" value="Beli" name="submit" class="submitreset bg-primary"/>
                           <input type="reset" value="Reset" name="reset" class="submitreset bg-primary"/></td>
+                      <!--  <td><a href="<?php echo site_url('Home/checkout') ?>" class="btn btn-info" role="button">More Info</a></td> -->
                       </tr>
                     </form>
                   </table>

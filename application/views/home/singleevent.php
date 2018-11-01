@@ -114,6 +114,7 @@
                       <tr style="text-align:center;">
                         <td colspan="2"><input type="submit" value="Beli" name="submit" class="submitreset bg-primary"/>
                           <input type="reset" value="Reset" name="reset" class="submitreset bg-primary"/></td>
+                        <td><a href="<?php echo site_url('Home/checkout') ?>" class="btn btn-info" role="button">More Info</a></td>
                       </tr>
                     </form>
                   </table>

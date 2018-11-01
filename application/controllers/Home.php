@@ -17,5 +17,9 @@
           $data["events"] = $this->event_model->getAll();
           $this->load->view('home/singleevent',$data);
         }
+
+        public function checkout(){
+          $this->load->view('home/Checkout');
+        }
     }
 ?>

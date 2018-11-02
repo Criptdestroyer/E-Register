@@ -52,7 +52,7 @@
 								<input class="form-control <?php echo form_error('no_hp') ? 'is-invalid':'' ?>"
 								 type="text" name="no_hp" placeholder="Customer Phone Number" />
 								<div class="invalid-feedback">
-									<?php echo form_error('no_hp') ?>
+									<?php echo form_error('no_hp') ?>$events->event_id == $query->id_event
 								</div>
 							</div>
                             <div class="form-group">

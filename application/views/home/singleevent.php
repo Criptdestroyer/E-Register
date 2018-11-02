@@ -82,7 +82,7 @@
                 <div class="beli-tiket">
                   <table>
                     
-                    <form method="post" action="<?php echo site_url('Home/checkout') ?>">
+                    <form method="post" action="<?php echo site_url('Home/checkout?id='.$events->event_id) ?>">
                     <input type="hidden" name="event_id" value="<?php echo $events->event_id?>" />
                       <tr>
                           <td>Event</td>

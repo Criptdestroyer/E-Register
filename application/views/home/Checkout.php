@@ -60,7 +60,7 @@ if(!$member_id){
           <?php }} ?>
           </div>
           <div class="bagian_tombol" style="text-align:center;">
-            <a href="<?php echo site_url('admin/Customers'); ?>" class="btn btn-info" role="button">Bayar</a>
+            <a href="<?php echo site_url('Home/transaksisukses'); ?>" class="btn btn-info" role="button">Bayar</a>
             <a href="" class="btn btn-danger" role="button">Batal</a>
           </div>
       </form>

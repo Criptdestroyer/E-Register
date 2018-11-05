@@ -10,11 +10,11 @@
         public $jumlah_ticket;
         public $no_hp;
         public $email;
-        
+
 
         public function rules(){
             return [
-                
+
                 ['field'=>'name',
                 'label'=>'name',
                 'rules'=>'required'],
@@ -55,6 +55,7 @@
             $this->bukti_pembayaran = $this->_uploadImage();
             // $this->bukti_pembayaran = $post["bukti_pembayaran"];
             $this->db->insert($this->_table,$this); //simpan ke databases
+            redirect('home/transaksisukses');
         }
 
         public function update(){

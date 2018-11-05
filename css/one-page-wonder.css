@@ -184,6 +184,12 @@ header.masthead .bg-circle-4 {
   background-color: linear-gradient(#8552cc,#c22966);
 }
 
+.card-img-top{
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+}
+
 .event-photo{
   margin-top: 5em;
   text-align: center;

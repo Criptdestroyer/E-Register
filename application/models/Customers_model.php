@@ -7,9 +7,9 @@
         public $payment;
         public $bukti_pembayaran = "default.jpeg";
         public $status="pending";
-        public $jumlah_ticket;
         public $no_hp;
         public $email;
+        public $id_event;
 
 
         public function rules(){
@@ -20,9 +20,6 @@
                 'rules'=>'required'],
                 ['field'=>'payment',
                 'label'=>'payment',
-                'rules'=>'numeric'],
-                ['field'=>'jumlah_ticket',
-                'label'=>'jumlah_ticket',
                 'rules'=>'numeric'],
                 ['field'=>'no_hp',
                 'label'=>'no_hp',
@@ -48,11 +45,12 @@
             $this->email = $post["email"];
             $this->no_hp = $post["no_hp"];
             $this->status = $post["status"];
-            $this->jumlah_ticket = $post["jumlah_ticket"];
+            $this->id_event = $post["id_event"];
             $this->bukti_pembayaran = $this->_uploadImage();
             // $this->bukti_pembayaran = $post["bukti_pembayaran"];
             $this->db->insert($this->_table,$this); //simpan ke databases
-            redirect('home/transaksisukses');
+            
+            redirect('home/transaksisukses?id='.$this->customer_id);
         }
 
         public function update(){
@@ -63,7 +61,8 @@
             $this->email = $post["email"];
             $this->no_hp = $post["no_hp"];
             $this->status = $post["status"];
-            $this->jumlah_ticket = $post["jumlah_ticket"];
+            $this->id_event = $post["id_event"];
+            
             if(!empty($_FILES["bukti_pembayaran"]["name"])){
                 $this->bukti_pembayaran = $this->_uploadImage();
             }else{

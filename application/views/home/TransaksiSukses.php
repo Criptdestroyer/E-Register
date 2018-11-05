@@ -10,23 +10,27 @@
 
     <!-- Navigation -->
   <?php $this->load->view("home/_partials/navigation.php") ?>
-
+  <?php 
+  
+    foreach ($customers as $value) {
+     if($value->customer_id == $_GET['id']){
+  ?>
   <section>
     <div class="container" style="margin-top:6em; height:500px;">
       <div class="row">
         <div class="col-md-6 offset-md-3 text-center">
           <h4>TERIMAKASIH TELAH MEMBELI TIKET</h4>
           <p>Segera Lakukan Pembayaran sebesar <br/>
-             Rp xxxx,xxx<br/>
+             Rp. <?php echo $value->payment ?><br/>
             Melalui Bank Transfer</p>
-          <p>Mandiri Cabang blablabla<br/>
-          09076538xxxxx<br/>
-          Nama Penerima Uang</p>
+          <p>BNI<br/>
+          09076535426223<br/>
+          A.N Ahmad Emir Alfatah</p>
         </div>
       </div>
     </div>
   </section>
-
+    <?php }} ?>
   <script type="text/javascript">
 
   </script>

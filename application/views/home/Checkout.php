@@ -45,7 +45,7 @@ if(!$member_id){
               <input type="hidden" name="no_hp" value="<?php echo $this->session->userdata('no_hp')?>" />
               <input type="hidden" name="jumlah_tiket" value="<?php echo 1?>" />
               <input type="hidden" name="status" value="<?php echo "pending"?>" />
-              
+              <input type="hidden" name='id_event' value="<?php echo $events->event_id ?>">
             
               <span class="label">Event</span><br/>
               <span class="nilai_label"><?php echo $events->title ?></span><br/>
@@ -54,7 +54,7 @@ if(!$member_id){
               <span class="nilai_label"><?php echo $events->updated_at ?></span><br/>
               
               <span class="label">Time</span><br/>
-              <span class="label"><?php echo $events->updated_at?> </span></span><br/>
+              <span class="nilai_label"><?php echo $events->updated_at?> </span></span><br/>
           
               <span class="label">Place</span><br/>
               <span class="nilai_label"><?php echo $events->details ?></span><br/>

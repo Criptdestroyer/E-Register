@@ -58,7 +58,7 @@
                                         <?php echo $product->payment ?>
                                     </td>
 									<td>
-										<img src="<?php echo 'upload/customer/'.$product->bukti_pembayaran ?>" width="64" />
+										<img src="<?php echo base_url('upload/customer/'.$product->bukti_pembayaran) ?>" width="64" />
                                     </td>
                                     <td>
 										<img src="<?php echo 'https://api.qrserver.com/v1/create-qr-code/?size=250x250&data='.$product->customer_id?>" width="64" />

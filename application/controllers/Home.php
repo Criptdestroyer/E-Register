@@ -3,6 +3,7 @@
         public function __construct(){
             parent::__construct();
             $this->load->model("event_model");
+            $this->load->model("Customers_model");
         }
         public function index(){
             $data["events"] = $this->event_model->getAll();
@@ -24,7 +25,8 @@
         }
 
         public function transaksisukses(){
-          $this->load->view('home/TransaksiSukses');
+        $data["customers"] = $this->Customers_model->getAll();
+          $this->load->view('home/TransaksiSukses',$data);
         }
     }
 ?>

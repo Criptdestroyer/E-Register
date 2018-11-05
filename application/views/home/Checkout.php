@@ -28,15 +28,15 @@ if(!$member_id){
     <div class="container" style="margin-top:6em;">
       <div class="row">
         <div class="col-md-4 offset-md-4">
-          <form method="post" action="<?php echo base_url('customers/save'); ?>">
+          <form method="post" action="<?php echo site_url('bayar/add'); ?>">
           <div class="biodata" style="text-align:center">
             <img class="img img-responsive rounded-circle mb-3" width="160" src="<?php echo base_url('upload/customer/default.jpeg') ?>" />
             <p><?php echo  $this->session->userdata('name'); ?></p>
-            <input type="hidden" name="name" value="<?php echo  $this->session->userdata('name'); ?>"/>
+            
             <p><?php echo $this->session->userdata('email'); ?></p>
-            <input type="hidden" name="email" value="<?php echo  $this->session->userdata('email'); ?>"/>
+            
             <p><?php echo $this->session->userdata('no_hp'); ?></p>
-            <input type="hidden" name="no_hp" value="<?php echo  $this->session->userdata('no_hp'); ?>"/>
+            
           </div>
           <div class="keterangan-pembelian text-left">
             <h6>Anda Membeli Tiket</h6>
@@ -50,19 +50,19 @@ if(!$member_id){
             
               <span class="label">Event</span><br/>
               <span class="nilai_label"><?php echo $events->title ?></span><br/>
-              <input type="hidden" name="name" value="<?php echo $events->title ?>"/>
+              
               <span class="label">Date</span><br/>
               <span class="nilai_label"><?php echo $events->updated_at ?></span><br/>
-              <input type="hidden" name="name" value="<?php echo $events->title ?>"/>
+              
               <span class="label">Time</span><br/>
-              <span class="nilai_label"><?php echo "null" </span>?></span><br/>
-              <input type="hidden" name="name" value="<?php echo $events->title ?>"/>
+              <span class="label"><?php echo $events->updated_at?> </span></span><br/>
+          
               <span class="label">Place</span><br/>
               <span class="nilai_label"><?php echo $events->details ?></span><br/>
-              <input type="hidden" name="name" value="<?php echo $events->title ?>"/>
+              
               <span class="label">Jenis tiket</span><br/>
               <span class="nilai_label"><?php echo $_POST['jenis_tiket'] ?></span><br/>
-              <input type="hidden" name="name" value="<?php echo $events->title ?>"/>
+              
             </div>
           </div>
           <div class="membayar" style="text-align:center;">
@@ -72,23 +72,13 @@ if(!$member_id){
                
                ?>
             <p class="harga">Rp.<?php echo $query->harga ?></p>
-<<<<<<< HEAD
-            <input type="hidden" name="payment" value="<?php echo $query->harga?>" />
-          <?php }} ?>
-          </div>
-          <div class="bagian_tombol" style="text-align:center;">
-          <input class="btn btn-success" type="submit" name="btn" value="Bayar" />
-            <!-- <a href="<?php echo site_url('Home/transaksisukses'); ?>" class="btn btn-info" role="button">Bayar</a> -->
-            <a href="" class=sebastian/object-enumerator"btn btn-danger" role="button">Batal</a>
-=======
-            <input type="hidden" name="name" value="<?php echo $events->title ?>"/>
+            <input type="hidden" name="payment" value="<?php echo $query->harga ?>"/>
 
           <?php }} ?>
           </div>
           <div class="bagian_tombol" style="text-align:center;">
             <a href="<?php echo site_url('admin/Customers'); ?>" class="btn btn-info" role="button">Bayar</a>
             <a href="<?php echo site_url('Home/info?id='.$events->event_id)?>" class="btn btn-danger" role="button">Batal</a>
->>>>>>> ce9631ed28854f74dfc8ef03ebec85520e7a21f3
           </div>
       </form>
       </div>

@@ -55,14 +55,7 @@
 									<?php echo form_error('no_hp') ?>$events->event_id == $query->id_event
 								</div>
 							</div>
-                            <div class="form-group">
-								<label for="jumlah_ticket">Jumlah Ticket*</label>
-								<input class="form-control <?php echo form_error('jumlah_ticket') ? 'is-invalid':'' ?>"
-								 type="number" name="jumlah_ticket" min="0" placeholder="Customer Total Ticket" />
-								<div class="invalid-feedback">
-									<?php echo form_error('price') ?>
-								</div>
-							</div>
+                            
                             <div class="form-group">
 								<label for="payment">Price*</label>
 								<input class="form-control <?php echo form_error('payment') ? 'is-invalid':'' ?>"

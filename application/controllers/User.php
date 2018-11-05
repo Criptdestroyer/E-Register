@@ -54,7 +54,7 @@
             $this->session->set_userdata('username',$data['username']);
             $this->session->set_userdata('no_hp',$data['no_hp']);
  
-            $this->load->view('User_profile');
+            redirect('Home/index');
         }else{
             $this->session->set_flashdata('error_msg', 'Wrong Username or Password');
             $this->load->view("Login.php");

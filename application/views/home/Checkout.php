@@ -28,7 +28,7 @@ if(!$member_id){
     <div class="container" style="margin-top:6em;">
       <div class="row">
         <div class="col-md-4 offset-md-4">
-          <form method="post" action="">
+          <form method="post" action="<?php base_url('admin/customer/add') ?>">
           <div class="biodata" style="text-align:center">
             <img class="img img-responsive rounded-circle mb-3" width="160" src="<?php echo base_url('upload/customer/default.jpeg') ?>" />
             <p><?php echo  $this->session->userdata('name'); ?></p>
@@ -38,6 +38,13 @@ if(!$member_id){
           <div class="keterangan-pembelian text-left">
             <h6>Anda Membeli Tiket</h6>
             <div>
+            
+              <input type="hidden" name="name" value="<?php echo $this->session->userdata('name')?>" />
+              <input type="hidden" name="email" value="<?php echo $this->session->userdata('email')?>" />
+              <input type="hidden" name="no_hp" value="<?php echo $this->session->userdata('no_hp')?>" />
+              <input type="hidden" name="jumlah_tiket" value="<?php echo 1?>" />
+              
+            
               <span class="label">Event</span><br/>
               <span class="nilai_label"><?php echo $events->title ?></span><br/>
               <span class="label">Date</span><br/>
@@ -54,21 +61,25 @@ if(!$member_id){
             <p>Anda harus Membayar</p>
             <?php foreach ($query as $query) {
                if($events->event_id == $query->id_event && $query->jenis_tiket == $_POST['jenis_tiket']){
+               
                ?>
             <p class="harga">Rp.<?php echo $query->harga ?></p>
-
+            <input type="hidden" name="payment" value="<?php echo $query->harga?>" />
           <?php }} ?>
           </div>
           <div class="bagian_tombol" style="text-align:center;">
-            <a href="<?php echo site_url('Home/transaksisukses'); ?>" class="btn btn-info" role="button">Bayar</a>
-            <a href="" class="btn btn-danger" role="button">Batal</a>
+          <input class="btn btn-success" type="submit" name="btn" value="Bayar" />
+            <!-- <a href="<?php echo site_url('Home/transaksisukses'); ?>" class="btn btn-info" role="button">Bayar</a> -->
+            <a href="" class=sebastian/object-enumerator"btn btn-danger" role="button">Batal</a>
           </div>
       </form>
       </div>
     </div>
   </div>
   </section>
-<?php }} ?>
+<?php }
+
+} ?>
   <script type="text/javascript">
 
   </script>

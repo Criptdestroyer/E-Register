@@ -6,7 +6,7 @@
         public $name;
         public $payment;
         public $bukti_pembayaran = "default.jpeg";
-        public $status;
+        public $status="pending";
         public $jumlah_ticket;
         public $no_hp;
         public $email;
@@ -21,9 +21,6 @@
                 ['field'=>'payment',
                 'label'=>'payment',
                 'rules'=>'numeric'],
-                ['field'=>'status',
-                'label'=>'status',
-                'rules'=>'required'],
                 ['field'=>'jumlah_ticket',
                 'label'=>'jumlah_ticket',
                 'rules'=>'numeric'],

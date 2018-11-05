@@ -27,7 +27,7 @@
               <div class="col-lg-5 bg-warning waktu"><?php echo $events->updated_at ?></div>
               <p><?php echo $events->description ?></p>
               <div class="beliinfobutton">
-                <a href="#" class="btn btn-success" role="button">More Info</a>
+                <a href="<?php echo site_url('Home/info?id='.$events->event_id) ?>" class="btn btn-success" role="button">More Info</a>
               </div>
             </div>
           </div>

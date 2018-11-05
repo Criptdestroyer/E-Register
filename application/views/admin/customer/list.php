@@ -33,10 +33,11 @@
                                         <th>Name</th>
 										<th>Email</th>
 										<th>No Hp</th>
-                                        <th>Jumlah Tiket</th>
 										<th>Price</th>
-                                        <th>Bukti Pembayaran</th>
+										<th>Bukti_pembayaran</th>
+                                        <th>QRcode</th>
                                         <th>Status</th>
+										<th>Enter Event</th>
 										<th>Action</th>
 									</tr>
 								</thead>
@@ -54,16 +55,19 @@
                                         <?php echo $product->no_hp ?>
                                     </td>
                                     <td>
-                                        <?php echo $product->jumlah_ticket ?>
-                                    </td>
-                                    <td>
                                         <?php echo $product->payment ?>
                                     </td>
+									<td>
+										<img src="<?php echo 'upload/customer/'.$product->bukti_pembayaran ?>" width="64" />
+                                    </td>
                                     <td>
-										<img src="<?php echo base_url('upload/customer/'.$product->bukti_pembayaran) ?>" width="64" />
+										<img src="<?php echo 'https://api.qrserver.com/v1/create-qr-code/?size=250x250&data='.$product->customer_id?>" width="64" />
                                     </td>
                                     <td>
                                         <?php echo $product->status ?>
+                                    </td>
+									<td>
+                                        <?php echo "not enter" ?>
                                     </td>
                                     <td >
 											<a href="<?php echo site_url('admin/customers/edit/'.$product->customer_id) ?>"
@@ -71,6 +75,7 @@
 											<a onclick="deleteConfirm('<?php echo site_url('admin/customers/delete/'.$product->customer_id) ?>')"
 											 href="#!" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
 										</td>
+										
                                 </tr>
                                 <?php endforeach;?>
 

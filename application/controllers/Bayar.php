@@ -6,7 +6,10 @@
             $this->load->model("customers_model");
             $this->load->library("form_validation");
         }
-    
+        public function index(){
+            $data["customers"] = $this->customers_model->getAll();
+            $this->load->view("admin/customer/list",$data);
+        }
     public function add(){
         $customer = $this->customers_model;
             $validation = $this->form_validation;

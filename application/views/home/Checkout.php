@@ -1,10 +1,8 @@
 <?php
 $member_id=$this->session->userdata('member_id');
-
 if(!$member_id){
   redirect('user/login_view');
 }
-
  ?>
 
 <!DOCTYPE html>
@@ -28,7 +26,7 @@ if(!$member_id){
     <div class="container" style="margin-top:6em;">
       <div class="row">
         <div class="col-md-4 offset-md-4">
-          <form method="post" action="<?php echo site_url('bayar/add'); ?>">
+          <form method="post" action="<?php echo site_url('admin/customers/add'); ?>">
           <div class="biodata" style="text-align:center">
             <img class="img img-responsive rounded-circle mb-3" width="160" src="<?php echo base_url('upload/customer/default.jpeg') ?>" />
             <p><?php echo  $this->session->userdata('name'); ?></p>
@@ -46,6 +44,7 @@ if(!$member_id){
               <input type="hidden" name="email" value="<?php echo $this->session->userdata('email')?>" />
               <input type="hidden" name="no_hp" value="<?php echo $this->session->userdata('no_hp')?>" />
               <input type="hidden" name="jumlah_tiket" value="<?php echo 1?>" />
+              <input type="hidden" name="status" value="<?php echo "pending"?>" />
               
             
               <span class="label">Event</span><br/>
@@ -77,7 +76,8 @@ if(!$member_id){
           <?php }} ?>
           </div>
           <div class="bagian_tombol" style="text-align:center;">
-            <a href="<?php echo site_url('admin/Customers'); ?>" class="btn btn-info" role="button">Bayar</a>
+            
+            <input class="btn btn-info" type="submit" name="bayar" value="bayar">
             <a href="<?php echo site_url('Home/info?id='.$events->event_id)?>" class="btn btn-danger" role="button">Batal</a>
           </div>
       </form>

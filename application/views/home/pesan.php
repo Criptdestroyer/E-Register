@@ -17,61 +17,30 @@
            <option value="this month">this month</option>
            <option value="next month">next month</option>
        </select>
-  </div>
 
-    <!--<section>
-        <div class="container">
-              <div class="panel panel-default card">
 
-              <div class="panel-heading post-thumb">
-                  <img class="img img-responsive" src="<?php// echo base_url('img/EvPhoto.jpg')?>" />
+      <div class="row mb-3 mt-2">
+        <?php foreach ($events as $events) {?>
+        <div class="col-md-3 d-flex align-items-stretch">
+          <div class="card evcard " style="width: 18rem;">
+            <img class="card-img-top img-responsive" src="<?php echo base_url('upload/event/'.$events->photo)?>" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><?php echo $events->title ?></h5>
+              <div class="card-title tanggal" style="color:red;">
+              <?php echo $events->updated_at ?><br/>
+              <?php echo $events->details ?>
               </div>
-
-              <div class="panel-body post-body">
-                  <h3 class="post-title">
-                      <a href="#">Judul Artikel</a>
-                  </h3>
-                  <div class="post-author">
-                      <p>Tanggal dan Tempat</a>
-                  </div>
-                  <div class="card-body">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                      ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                       voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                       Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                       anim id est laborum.
-                  </div>
-              </div>
-
+              <p class="card-text desc"><?php echo substr($events->description, 0, 120) ?>...</p>
             </div>
-      </div>
-    </section>-->
-    <?php foreach ($events as $events) {?>
-    <section>
-
-      <div class="col-md-3 mt-2 mb-2">
-        <div class="card evcard" style="width: 18rem;">
-          <img class="card-img-top img-responsive" src="<?php echo base_url('upload/event/'.$events->photo)?>" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title"><?php echo $events->title ?></h5>
-            <div class="card-title tanggal" style="color:red;">
-            <?php echo $events->updated_at ?><br/>
-            <?php echo $events->details ?>
+            <div class="card-header beliinfobutton">
+              <a href="<?php echo site_url('Home/info?id='.$events->event_id) ?>" class="btn btn-info" role="button">More Info</a>
             </div>
-            <p class="card-text desc"><?php echo substr($events->description, 0, 120) ?>...</p>
           </div>
-          <div class="card-header beliinfobutton">
-
-            <a href="<?php echo site_url('Home/info?id='.$events->event_id) ?>" class="btn btn-info" role="button">More Info</a>
-
-          </div>
+        </div>
+          <?php } ?>
       </div>
 
-      </div>
-
-    </section>
-    <?php } ?>
+    </div>
 
     <!-- Footer -->
     <?php $this->load->view("home/_partials/footer.php") ?>

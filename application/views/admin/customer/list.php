@@ -34,10 +34,10 @@
 										<th>Email</th>
 										<th>No Hp</th>
 										<th>Price</th>
-										<th>Bukti_pembayaran</th>
+										<th>Bukti</th>
                                         <th>QRcode</th>
                                         <th>Status</th>
-										<th>Enter Event</th>
+										<th>Enter</th>
 										<th>Action</th>
 									</tr>
 								</thead>
@@ -67,7 +67,7 @@
                                         <?php echo $product->status ?>
                                     </td>
 									<td>
-                                        <?php echo "not enter" ?>
+                                        <?php echo $product->enter ?>
                                     </td>
                                     <td >
 											<a href="<?php echo site_url('admin/customers/edit/'.$product->customer_id) ?>"

@@ -35,7 +35,8 @@
 						<form action="<?php base_url('admin/customer/edit') ?>" method="post" enctype="multipart/form-data">
 
 							<input type="hidden" name="id" value="<?php echo $customer->customer_id?>" />
-
+							
+							
 							<div class="form-group">
 								<label for="name">Name*</label>
 								<input class="form-control <?php echo form_error('name') ? 'is-invalid':'' ?>"
@@ -60,14 +61,7 @@
 									<?php echo form_error('no_hp') ?>
 								</div>
 							</div>
-                            <div class="form-group">
-								<label for="jumlah_ticket">Jumlah Ticket*</label>
-								<input class="form-control <?php echo form_error('jumlah_ticket') ? 'is-invalid':'' ?>"
-								 type="number" name="jumlah_ticket" min="0" placeholder="Customer Total Ticket" value="<?php echo $customer->jumlah_ticket ?>"/>
-								<div class="invalid-feedback">
-									<?php echo form_error('price') ?>
-								</div>
-							</div>
+                            
                             <div class="form-group">
 								<label for="payment">Price*</label>
 								<input class="form-control <?php echo form_error('payment') ? 'is-invalid':'' ?>"
@@ -94,7 +88,7 @@
 									<?php echo form_error('status') ?>
 								</div>
 							</div>
-							
+							<input type="hidden" name="id_event" value="<?php echo $customer->id_event?>" />
 							<input class="btn btn-success" type="submit" name="btn" value="Save" />
 						</form>
 

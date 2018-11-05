@@ -7,6 +7,7 @@
         public $payment;
         public $bukti_pembayaran = "default.jpeg";
         public $status="pending";
+        public $enter = "no";
         public $no_hp;
         public $email;
         public $id_event;

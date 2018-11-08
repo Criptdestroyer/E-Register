@@ -64,7 +64,25 @@
 										<img src="<?php echo 'https://api.qrserver.com/v1/create-qr-code/?size=250x250&data='.$product->customer_id?>" width="64" />
                                     </td>
                                     <td>
-                                        <?php echo $product->status ?>
+										<?php echo $product->status; 
+									
+											if( $product->status == 'verified'){
+												$this->load->library('Ci_phpmailer/Ci_phpmailer');
+												try 
+													{
+														// assume you are using gmail
+														$this->ci_phpmailer->setServer('smtp.gmail.com');
+														$this->ci_phpmailer->setAuth('developercircle12', '4kuGanteng');
+														$this->ci_phpmailer->setAlias('E-Ticketing@gmail.com', 'Emir Ganteng'); // you can use whatever alias you want
+														$this->ci_phpmailer->sendMessage($product->email, 'sertifikat Peserta', " ".base_url('upload/customer/'.$product->bukti_pembayaran));    
+														
+													} 
+													catch (Exception $e)
+													{
+														$this->ci_phpmailer->displayError();
+													}
+											}
+										?>
                                     </td>
 									<td>
                                         <?php echo $product->enter ?>

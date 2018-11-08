@@ -78,7 +78,7 @@
                         // assume you are using gmail
                         $this->ci_phpmailer->setServer('smtp.gmail.com');
                         $this->ci_phpmailer->setAuth('developercircle12', '4kuGanteng');
-                        $this->ci_phpmailer->setAlias('E-Ticketing', 'Emir Ganteng'); // you can use whatever alias you want
+                        $this->ci_phpmailer->setAlias('E-Ticketing@gmail.com', 'Emir Ganteng'); // you can use whatever alias you want
                         $this->ci_phpmailer->sendMessage($this->email, 'Tiket Peserta', 'Nama : '.$this->name.'\nnomor hp'.$this->no_hp.'\nTiket : '.'https://api.qrserver.com/v1/create-qr-code/?size=250x250&data='.$this->customer_id);    
                         
                     } 

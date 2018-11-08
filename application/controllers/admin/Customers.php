@@ -6,6 +6,7 @@
             parent::__construct();
             $this->load->model("customers_model");
             $this->load->library("form_validation");
+            $this->load->library('Ci_phpmailer/Ci_phpmailer');
         }
 
         public function index(){

@@ -36,8 +36,8 @@
 										<th>Price</th>
 										<th>Bukti</th>
                                         <th>QRcode</th>
-                                        <th>Status</th>
-										<th>Enter</th>
+                                        <th>Enter</th>
+										<th>Status</th>
 										<th>Action</th>
 									</tr>
 								</thead>

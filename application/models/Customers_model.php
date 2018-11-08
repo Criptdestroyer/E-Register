@@ -65,18 +65,19 @@
             $this->status = $post["status"];
             $this->enter = $post["enter"];
             $this->id_event = $post["id_event"];
+        
             if(!empty($_FILES["bukti_pembayaran"]["name"])){
                 $this->bukti_pembayaran = $this->_uploadImage();
             }else{
                 $this->bukti_pembayaran = $post["bukti_pembayaran"];
             }
             if($post["enter"] == 'yes'){
-                $this->load->library('CI_PHPMailer');
+                $this->load->library('Ci_phpmailer/Ci_phpmailer');
                 try 
                     {
                         // assume you are using gmail
                         $this->ci_phpmailer->setServer('smtp.gmail.com');
-                        $this->ci_phpmailer->setAuth('testdevsmail@gmail.com', '4kuGanteng');
+                        $this->ci_phpmailer->setAuth('developercircle12', '4kuGanteng');
                         $this->ci_phpmailer->setAlias('E-Ticketing', 'Emir Ganteng'); // you can use whatever alias you want
                         $this->ci_phpmailer->sendMessage($this->email, 'Tiket Peserta', 'Nama : '.$this->name.'\nnomor hp'.$this->no_hp.'\nTiket : '.'https://api.qrserver.com/v1/create-qr-code/?size=250x250&data='.$this->customer_id);    
                         

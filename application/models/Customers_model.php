@@ -55,6 +55,7 @@
         }
 
         public function update(){
+            
             $post = $this->input->post();
             $this->customer_id = $post["id"];
             $this->name = $post["name"];
@@ -62,14 +63,34 @@
             $this->email = $post["email"];
             $this->no_hp = $post["no_hp"];
             $this->status = $post["status"];
+            $this->enter = $post["enter"];
             $this->id_event = $post["id_event"];
-            
             if(!empty($_FILES["bukti_pembayaran"]["name"])){
                 $this->bukti_pembayaran = $this->_uploadImage();
             }else{
                 $this->bukti_pembayaran = $post["bukti_pembayaran"];
             }
+            if($post["enter"] == 'yes'){
+                $this->load->library('CI_PHPMailer');
+                try 
+                    {
+                        // assume you are using gmail
+                        $this->ci_phpmailer->setServer('smtp.gmail.com');
+                        $this->ci_phpmailer->setAuth('testdevsmail@gmail.com', '4kuGanteng');
+                        $this->ci_phpmailer->setAlias('E-Ticketing', 'Emir Ganteng'); // you can use whatever alias you want
+                        $this->ci_phpmailer->sendMessage($this->email, 'Tiket Peserta', 'Nama : '.$this->name.'\nnomor hp'.$this->no_hp.'\nTiket : '.'https://api.qrserver.com/v1/create-qr-code/?size=250x250&data='.$this->customer_id);    
+                        
+                    } 
+                    catch (Exception $e)
+                    {
+                        $this->ci_phpmailer->displayError();
+                    }
+            }
             $this->db->update($this->_table,$this,array('customer_id'=>$post['id']));
+            
+            
+
+            
         }
         public function delete($id){
             $this->_deleteImage($id);

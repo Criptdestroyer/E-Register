@@ -75,12 +75,21 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
+<<<<<<< HEAD
 	// 'hostname' => '52.187.182.63',
 	// 'username' => 'azhary',
 	// 'password' => '4kuGanteng',
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
+=======
+	'hostname' => '52.187.182.63',
+	'username' => 'azhary',
+	'password' => '4kuGanteng',
+	// 'hostname' => 'localhost',
+	// 'username' => 'alfath',
+	// 'password' => 'cyber',
+>>>>>>> d92286344fdbb70e34b12e9219fb574678958575
 	'database' => 'Eticketing',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

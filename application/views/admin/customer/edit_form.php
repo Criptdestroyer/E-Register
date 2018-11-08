@@ -81,11 +81,19 @@
 							</div>
                             
                             <div class="form-group">
-								<label for="status">Status*</label>
+								<label for="status">Enter*</label>
 								<input class="form-control <?php echo form_error('status') ? 'is-invalid':'' ?>"
 								 type="text" name="status" placeholder="Customer Verification Status" value="<?php echo $customer->status ?>"/>
 								<div class="invalid-feedback">
 									<?php echo form_error('status') ?>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="enter">Status*</label>
+								<input class="form-control <?php echo form_error('enter') ? 'is-invalid':'' ?>"
+								 type="text" name="enter" placeholder="Customer Verification enter" value="<?php echo $customer->enter ?>"/>
+								<div class="invalid-feedback">
+									<?php echo form_error('enter') ?>
 								</div>
 							</div>
 							<input type="hidden" name="id_event" value="<?php echo $customer->id_event?>" />
